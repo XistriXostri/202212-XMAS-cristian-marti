@@ -1,5 +1,5 @@
 import React from 'react';
-import { MenuItem } from '../../types/menu.item';
+import { MenuItems } from '../../types/menu.item';
 import { AppRoutes } from '../routes/app.routes';
 
 import './App.css';

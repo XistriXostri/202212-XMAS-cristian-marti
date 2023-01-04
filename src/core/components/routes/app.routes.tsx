@@ -1,4 +1,6 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
+import HomePage from '../../../features/home/pages/home.page';
+import RobotsPage from '../../../features/robots/pages/robots.page';
 
 import { MenuItems } from '../../types/menu.item';
 
