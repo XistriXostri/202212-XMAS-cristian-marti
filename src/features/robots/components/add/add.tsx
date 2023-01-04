@@ -1,7 +1,5 @@
 import { SyntheticEvent, useState } from 'react';
-
 import { Robot } from '../../models/robot';
-import './add.css';
 
 export function Add({ handleAdd }: { handleAdd: (robot: Robot) => void }) {
     const initialFormData: Partial<Robot> = {

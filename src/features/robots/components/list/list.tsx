@@ -2,7 +2,6 @@ import { useEffect } from 'react';
 import { useRobots } from '../../hooks/use.robots';
 import { Add } from '../add/add';
 import { Item } from '../item/item';
-import './list.css';
 
 export function List() {
     const { getRobots, handleLoad, handleAdd, handleDelete, handleUpdate } =
@@ -15,11 +14,11 @@ export function List() {
     return (
         <>
             <Add handleAdd={handleAdd}></Add>
-            <h3>Lista de notas</h3>
+            <h3>Robots list</h3>
             {!getRobots().length ? (
                 <p>Loading ....</p>
             ) : (
-                <ul className="note-list">
+                <ul className="robots-list">
                     {getRobots().map((item) => {
                         return (
                             <li key={item.id}>

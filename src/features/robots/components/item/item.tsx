@@ -1,5 +1,4 @@
 import { RobotStructure } from '../../models/robot';
-import './item.css';
 
 export function Item({
     item,
