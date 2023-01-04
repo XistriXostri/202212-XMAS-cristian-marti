@@ -1,7 +1,7 @@
 import './header.css';
 
 export function Header({ children }: { children: JSX.Element }) {
-    const title = 'Learning Components';
+    const title = 'Challenge Xmas';
 
     return (
         <header aria-label="title">
