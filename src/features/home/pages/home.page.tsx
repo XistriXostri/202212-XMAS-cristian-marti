@@ -12,8 +12,9 @@ export default function HomePage() {
 
     return (
         <>
-            <h2 className="home__title">Home</h2>
-            <p className="home__text">
+            <h2 className="page__title">Home</h2>
+            <hr className="bar"></hr>
+            <p className="page__text">
                 Robots: {totalRobots ? totalRobots : 0}
             </p>
         </>
