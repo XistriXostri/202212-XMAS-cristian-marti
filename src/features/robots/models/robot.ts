@@ -1,9 +1,12 @@
 export type RobotStructure = {
     id: string;
+    name: string;
     velocity: number;
     strength: number;
     creationDate: string;
     creator: string;
+    image: string;
+    isFavourite: boolean;
 };
 
 export class Robot implements RobotStructure {
@@ -19,12 +22,18 @@ export class Robot implements RobotStructure {
 
     id: string;
     creationDate: string;
+    image: string;
+    isFavourite: boolean;
+
     constructor(
+        public name: string,
         public velocity: number,
         public strength: number,
         public creator: string
     ) {
         this.id = Robot.generateId();
         this.creationDate = Robot.generateDate();
+        this.image = `https://robohash.org/${this.name}.png`;
+        this.isFavourite = false;
     }
 }

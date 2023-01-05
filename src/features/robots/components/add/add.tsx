@@ -19,6 +19,7 @@ export function Add({ handleAdd }: { handleAdd: (robot: Robot) => void }) {
         ev.preventDefault();
         handleAdd(
             new Robot(
+                formData.name as string,
                 formData.velocity as number,
                 formData.strength as number,
                 formData.creator ? formData.creator : 'unknown'
@@ -31,6 +32,18 @@ export function Add({ handleAdd }: { handleAdd: (robot: Robot) => void }) {
         <section>
             <h3>Create Robot</h3>
             <form className="add-robot" onSubmit={handleSubmit}>
+                <div>
+                    <label htmlFor="name">Robot name</label>
+                    <input
+                        type="string"
+                        name="name"
+                        id="name"
+                        placeholder="Robot name"
+                        value={formData.name}
+                        onInput={handleInput}
+                        required
+                    />
+                </div>
                 <div>
                     <label htmlFor="velocity">Velocity</label>
                     <input
