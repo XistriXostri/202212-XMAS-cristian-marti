@@ -24,7 +24,7 @@ export function Item({
     };
 
     return (
-        <li className="robot" key={item.id}>
+        <>
             <div>
                 <img
                     className="robot__image"
@@ -32,38 +32,24 @@ export function Item({
                     alt={item.name}
                 />
             </div>
-            <div>
+            <div className="robot__features">
                 <h2 className="robot__title">{item.name}</h2>
-                <p className="robot__feature">Velocity: {item.velocity}</p>
-                <p className="robot__feature">Strength: {item.strength}</p>
-                <p className="robot__feature">Creator: {item.creator}</p>
-                <p className="robot__feature">
-                    Creation date: {item.creationDate}
-                </p>
+                <p>Velocity: {item.velocity}</p>
+                <p>Strength: {item.strength}</p>
+                <p>Creator: {item.creator}</p>
+                <p>Creation date: {item.creationDate}</p>
             </div>
-            <div>
-                <span
-                    role="button"
-                    className="robot__button"
-                    onClick={() => handleClick('fav')}
-                >
+            <div className="robot__buttons">
+                <span role="button" onClick={() => handleClick('fav')}>
                     ⭐
                 </span>
-                <span
-                    role="button"
-                    className="robot__button"
-                    onClick={() => handleClick('modify')}
-                >
+                <span role="button" onClick={() => handleClick('modify')}>
                     🛠
                 </span>
-                <span
-                    role="button"
-                    className="robot__button"
-                    onClick={() => handleClick('delete')}
-                >
+                <span role="button" onClick={() => handleClick('delete')}>
                     🗑️
                 </span>
             </div>
-        </li>
+        </>
     );
 }

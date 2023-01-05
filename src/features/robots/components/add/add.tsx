@@ -29,59 +29,61 @@ export function Add({ handleAdd }: { handleAdd: (robot: Robot) => void }) {
     };
 
     return (
-        <section>
-            <h3>Create Robot</h3>
-            <form className="add-robot" onSubmit={handleSubmit}>
-                <div>
-                    <label htmlFor="name">Robot name</label>
-                    <input
-                        type="string"
-                        name="name"
-                        id="name"
-                        placeholder="Robot name"
-                        value={formData.name}
-                        onInput={handleInput}
-                        required
-                    />
+        <section className="add__section">
+            <h2 className="add__title">Create Robot</h2>
+            <form className="add__robot" onSubmit={handleSubmit}>
+                <div className="add__textInput">
+                    <div>
+                        <label htmlFor="name">Robot name:</label>
+                        <input
+                            type="text"
+                            name="name"
+                            id="name"
+                            value={formData.name}
+                            onInput={handleInput}
+                            required
+                        />
+                    </div>
+                    <div>
+                        <label htmlFor="creator">Creator name:</label>
+                        <input
+                            type="text"
+                            name="creator"
+                            id="creator"
+                            value={formData.creator}
+                            onInput={handleInput}
+                        />
+                    </div>
                 </div>
-                <div>
-                    <label htmlFor="velocity">Velocity</label>
-                    <input
-                        type="number"
-                        name="velocity"
-                        id="velocity"
-                        placeholder="Velocity (0 - 10)"
-                        min="0"
-                        max="10"
-                        value={formData.velocity}
-                        onInput={handleInput}
-                        required
-                    />
-                </div>
-                <div>
-                    <label htmlFor="strength">Strength</label>
-                    <input
-                        type="number"
-                        name="strength"
-                        id="strength"
-                        placeholder="strength (0 - 10)"
-                        min="0"
-                        max="10"
-                        value={formData.strength}
-                        onInput={handleInput}
-                        required
-                    />
-                </div>
-                <div>
-                    <label htmlFor="creator">Creator name</label>
-                    <input
-                        type="text"
-                        name="creator"
-                        id="creator"
-                        value={formData.creator}
-                        onInput={handleInput}
-                        placeholder="Creator of the robot"
-                    />
+                <div className="add__rangeInput">
+                    <div>
+                        <label htmlFor="velocity">Velocity</label>
+                        <input
+                            type="range"
+                            name="velocity"
+                            id="velocity"
+                            min="0"
+                            max="10"
+                            value={formData.velocity}
+                            onInput={handleInput}
+                            required
+                        />
+                        <output>{formData.velocity}</output>
+                    </div>
+                    <div>
+                        <label htmlFor="strength">Strength</label>
+                        <input
+                            type="range"
+                            name="strength"
+                            id="strength"
+                            min="0"
+                            max="10"
+                            value={formData.strength}
+                            onInput={handleInput}
+                            required
+                        />
+                        <output>{formData.strength}</output>
+                    </div>
                 </div>
                 <div>
                     <button type="submit">Create</button>

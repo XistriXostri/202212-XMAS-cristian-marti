@@ -13,7 +13,7 @@ describe('Given Header component', () => {
                 </Router>
             );
             const elementHeader = screen.getByRole('heading', {
-                name: 'Challenge Xmas',
+                name: 'Robots App',
             });
             expect(elementHeader).toBeInTheDocument();
         });
