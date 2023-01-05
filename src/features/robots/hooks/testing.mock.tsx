@@ -1,5 +1,5 @@
 import { Robot } from '../models/robot';
-import { RobotsRepo } from '../services/repository/robots.repo';
+import { RobotsRepo } from '../services/repository/repo.robots';
 export const mockRobot1 = new Robot(1, 1, 'user');
 mockRobot1.id = '000001';
 export const mockRobot2 = new Robot(2, 2, 'user');

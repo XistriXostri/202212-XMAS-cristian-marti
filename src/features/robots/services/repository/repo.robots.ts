@@ -1,13 +1,12 @@
-import { RobotStructure } from '../../models/robot';
 import { Repository } from '../../../../core/services/repository/repo';
+import { RobotStructure } from '../../models/robot';
 
 const invalidIdError = new Error('Invalid ID');
 
 export class RobotsRepo implements Repository<RobotStructure> {
-    constructor(private url = 'http://localhost:3300/robots/') {
-        //
-    }
-
+    constructor(
+        private url = 'https://my-json-server.typicode.com/xistrixostri/API/robots'
+    ) {}
     async load(): Promise<RobotStructure[]> {
         const resp = await fetch(this.url);
         if (!resp.ok)
@@ -35,6 +34,7 @@ export class RobotsRepo implements Repository<RobotStructure> {
             throw new Error(`Error ${resp.status}: ${resp.statusText}`);
         return await resp.json();
     }
+
     async update(payload: Partial<RobotStructure>): Promise<RobotStructure> {
         if (!payload.id) return Promise.reject(invalidIdError);
         const resp = await fetch(this.url + payload.id, {

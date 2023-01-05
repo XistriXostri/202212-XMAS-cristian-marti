@@ -1,7 +1,7 @@
 import { useCallback, useMemo, useState } from 'react';
 import { consoleDebug } from '../../../tools/debug';
 import { Robot, RobotStructure } from '../models/robot';
-import { RobotsRepo } from '../services/repository/robots.repo';
+import { RobotsRepo } from '../services/repository/repo.robots';
 
 export type UseRobots = {
     getStatus: () => Status;
@@ -16,11 +16,13 @@ type Status = 'Starting' | 'Loading' | 'Loaded';
 
 export function useRobots(): UseRobots {
     const repo = useMemo(() => new RobotsRepo(), []);
-    consoleDebug('useRobots Instance');
+
+    consoleDebug('useRobots Instance'); //se puede quitar
 
     const initialState: Array<RobotStructure> = [];
-    const initialStatus = 'Starting' as Status;
     const [robots, setRobots] = useState(initialState);
+
+    const initialStatus = 'Starting' as Status;
     const [status, setStatus] = useState(initialStatus);
 
     const getRobots = () => robots;
