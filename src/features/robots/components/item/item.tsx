@@ -19,28 +19,46 @@ export function Item({
     };
 
     return (
-        <div className="item-robot">
-            <span className="item-robot__start">
-                {/* <input
-                    type="checkbox"
-                    checked={item.isImportant}
-                    onChange={handleChange}
-                /> */}
-                <span>{item.id}</span>
-            </span>
-            <span className="item-note__middle">
-                <output>{item.velocity}</output>
-                <output>{item.strength}</output>
-                <output>{item.creationDate}</output>
-                <output>{item.creator}</output>
-            </span>
-            <span
-                role="button"
-                className="item-robot__end button"
-                onClick={handleClick}
-            >
-                🗑️
-            </span>
-        </div>
+        <li className="robot" key={item.id}>
+            <div>
+                <img
+                    className="robot__image"
+                    src={item.image}
+                    alt={item.name}
+                />
+            </div>
+            <div>
+                <h2 className="robot__title">{item.name}</h2>
+                <p className="robot__feature">Velocity: {item.velocity}</p>
+                <p className="robot__feature">Strength: {item.strength}</p>
+                <p className="robot__feature">Creator: {item.creator}</p>
+                <p className="robot__feature">
+                    Creation date: {item.creationDate}
+                </p>
+            </div>
+            <div>
+                <span
+                    role="button"
+                    className="robot__button"
+                    onClick={handleClick}
+                >
+                    ⭐
+                </span>
+                <span
+                    role="button"
+                    className="robot__button"
+                    onClick={handleClick}
+                >
+                    🛠
+                </span>
+                <span
+                    role="button"
+                    className="robot__button"
+                    onClick={handleClick}
+                >
+                    🗑️
+                </span>
+            </div>
+        </li>
     );
 }
