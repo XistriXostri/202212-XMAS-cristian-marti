@@ -6,16 +6,21 @@ export function Item({
     handleDelete,
 }: {
     item: RobotStructure;
-    handleUpdate: (note: Partial<RobotStructure>) => void;
+    handleUpdate: (robot: Partial<RobotStructure>) => void;
     handleDelete: (id: RobotStructure['id']) => void;
 }) {
-    // const handleChange = () => {
-    //     item.isImportant = !item.isImportant;
-    //     handleUpdate(item);
-    // };
-
-    const handleClick = () => {
-        handleDelete(item.id);
+    const handleClick = (action: string) => {
+        switch (action) {
+            case 'delete':
+                handleDelete(item.id);
+                break;
+            case 'modify':
+                item.isFavourite = !item.isFavourite;
+                handleUpdate(item);
+                break;
+            case 'fav':
+                break;
+        }
     };
 
     return (
@@ -40,21 +45,21 @@ export function Item({
                 <span
                     role="button"
                     className="robot__button"
-                    onClick={handleClick}
+                    onClick={() => handleClick('fav')}
                 >
                     ⭐
                 </span>
                 <span
                     role="button"
                     className="robot__button"
-                    onClick={handleClick}
+                    onClick={() => handleClick('modify')}
                 >
                     🛠
                 </span>
                 <span
                     role="button"
                     className="robot__button"
-                    onClick={handleClick}
+                    onClick={() => handleClick('delete')}
                 >
                     🗑️
                 </span>
