@@ -239,7 +239,7 @@ footer {
     height: 300px;
     display: inline-block;
     border-style: solid;
-    border-image-source: url(http://ronenness.github.io/RPGUI/rpgui/img/border-image.png);
+    border-image-source: url(http://ronenness.github.io/RPGUI/rpgui/img/border-image-golden.png);
     border-image-repeat: repeat;
     border-image-slice: 6 6 6 6;
     border-image-width: 18px;
@@ -247,7 +247,7 @@ footer {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    background: url(http://ronenness.github.io/RPGUI/rpgui/img/background-image.png)
+    background: url(http://ronenness.github.io/RPGUI/rpgui/img/background-image-golden.png)
         center;
     background-clip: padding-box;
     background-origin: padding-box;
