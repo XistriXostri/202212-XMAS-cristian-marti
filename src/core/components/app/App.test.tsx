@@ -1,9 +1,17 @@
-import React from 'react';
 import { render, screen } from '@testing-library/react';
-import App from './App';
+import { MemoryRouter as Router } from 'react-router';
+import { App } from './App';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+describe('Given App component', () => {
+    describe('When it has been render', () => {
+        test('Then its child components should be render also with its title', () => {
+            render(
+                <Router>
+                    <App />
+                </Router>
+            );
+            const elementHeader = screen.getAllByRole('heading');
+            expect(elementHeader[0]).toBeInTheDocument();
+        });
+    });
 });

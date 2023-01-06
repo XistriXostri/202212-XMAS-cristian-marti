@@ -14,8 +14,6 @@ export function Item({
             case 'delete':
                 handleDelete(item.id);
                 break;
-            case 'modify':
-                break;
             case 'fav':
                 item.isFavourite = !item.isFavourite;
                 handleUpdate(item);
@@ -43,9 +41,7 @@ export function Item({
                 <span role="button" onClick={() => handleClick('fav')}>
                     {item.isFavourite ? '⭐' : '✩'}
                 </span>
-                <span role="button" onClick={() => handleClick('modify')}>
-                    🛠
-                </span>
+                <span role="button">🛠</span>
                 <span role="button" onClick={() => handleClick('delete')}>
                     🗑️
                 </span>

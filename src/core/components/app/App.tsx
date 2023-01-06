@@ -8,7 +8,7 @@ import { AppRoutes } from '../routes/app.routes';
 
 import './App.css';
 
-function App() {
+export function App() {
     const items: MenuItems = [
         { path: '/home', label: 'Home' },
         { path: '/robots', label: 'Robots' },
