@@ -1,4 +1,5 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
+import FavouritesPage from '../../pages/favourites/favourites.page';
 import HomePage from '../../pages/home/home.page';
 import RobotsPage from '../../pages/robots/robots.page';
 import { MenuItems } from '../../types/menu.item';
@@ -30,6 +31,16 @@ export function AppRoutes({
                         robots={robots}
                         handleAdd={handleAdd}
                     ></RobotsPage>
+                }
+            ></Route>
+            <Route
+                path={items[2].path}
+                element={
+                    <FavouritesPage
+                        handleDelete={handleDelete}
+                        handleUpdate={handleUpdate}
+                        robots={robots}
+                    ></FavouritesPage>
                 }
             ></Route>
             <Route
