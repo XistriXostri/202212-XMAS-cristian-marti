@@ -1,9 +1,6 @@
-import {
-    getStorageList,
-    setStorageList,
-} from '../../../core/services/storage/storage';
+import { getStorageList, setStorageList } from '../../services/storage/storage';
 import { consoleDebug } from '../../../tools/debug';
-import { Robot, RobotStructure } from '../models/robot';
+import { Robot, RobotStructure } from '../../types/robot';
 import { ROBOTS } from './mock.robots';
 
 export const getRobots = async (): Promise<Array<RobotStructure>> => {
