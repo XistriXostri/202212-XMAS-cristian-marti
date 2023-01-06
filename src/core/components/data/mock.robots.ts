@@ -1,6 +1,6 @@
 import { Robot } from '../../types/robot';
 
 export const ROBOTS = [
-    new Robot('Cristian', 5, 0, 'Cristian'),
-    new Robot('Pepe', 0, 5, 'Pepe'),
+    new Robot('wally', 1, 1, 'Cristian'),
+    new Robot('Pepe', 2, 2, 'Pepe'),
 ];
