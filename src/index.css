@@ -255,6 +255,10 @@ footer {
     align-items: center;
 }
 
+.robot__buttons span:hover {
+    text-shadow: -2px 0 #d27d2c, 0 2px #d27d2c, 2px 0 #d27d2c, 0 -2px #d27d2c;
+}
+
 .robot__buttons span {
     font-size: 2rem;
     margin-top: 1rem;

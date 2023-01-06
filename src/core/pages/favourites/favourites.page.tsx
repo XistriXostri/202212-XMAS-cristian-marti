@@ -1,5 +1,5 @@
 import { List } from '../../components/robot/list/robot.list';
-import { Robot, RobotStructure } from '../../types/robot';
+import { RobotStructure } from '../../types/robot';
 
 export default function FavouritesPage({
     robots,
