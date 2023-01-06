@@ -60,7 +60,7 @@ describe('Given saveRobots', () => {
         test('Then localStorage should be use with the data', () => {
             const mockRobots: Array<Robot> = [];
             saveRobots(mockRobots);
-            expect(setStorageList).toHaveBeenCalledWith('Notes', mockRobots);
+            expect(setStorageList).toHaveBeenCalledWith('Robots', mockRobots);
         });
     });
 });

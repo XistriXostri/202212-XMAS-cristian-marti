@@ -11,7 +11,7 @@ describe('Given App component', () => {
                 </Router>
             );
             const elementHeader = screen.getAllByRole('heading');
-            expect(elementHeader).toBeInTheDocument();
+            expect(elementHeader[0]).toBeInTheDocument();
         });
     });
 });

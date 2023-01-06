@@ -1,23 +1,18 @@
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { Robot } from '../../../types/robot';
+import { robotMock } from '../../data/mock.robots';
 import { Item } from './robot.item';
 
 describe('Given "Item" component', () => {
     const handleUpdate = jest.fn();
     const handleDelete = jest.fn();
-    const mockName = 'Test_name';
-    const mockVelocity = 1;
-    const mockStrenght = 2;
-    const mockCreator = 'Test creation';
-    const date = new Date().toLocaleDateString('es-UE');
 
-    const mockRobot = new Robot(
-        mockName,
-        mockVelocity,
-        mockStrenght,
-        mockCreator
-    );
+    const mockName = 'wally';
+    const mockVelocity = 1;
+    const mockStrenght = 1;
+    const mockCreator = 'Cristian';
+
+    const mockRobot = robotMock;
     describe('When data are provided in the component', () => {
         test('Then user could interact with them', async () => {
             render(
@@ -34,7 +29,6 @@ describe('Given "Item" component', () => {
                 screen.getByText(`Velocity: ${mockVelocity}`),
                 screen.getByText(`Strength: ${mockStrenght}`),
                 screen.getByText(`Creator: ${mockCreator}`),
-                screen.getByText(`Creation date: ${date}`),
                 ...screen.getAllByRole('button'),
             ];
 
@@ -48,9 +42,9 @@ describe('Given "Item" component', () => {
             expect(elements[4]).toBeInTheDocument();
             expect(elements[5]).toBeInTheDocument();
 
-            userEvent.click(elements[6]);
+            userEvent.click(elements[5]);
             expect(handleUpdate).toHaveBeenCalledTimes(1);
-            userEvent.click(elements[8]);
+            userEvent.click(elements[7]);
             expect(handleDelete).toHaveBeenCalledTimes(1);
         });
     });

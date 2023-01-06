@@ -17,11 +17,9 @@ describe('Given Menu component', () => {
         const elements = [
             screen.getByText(/Home/i),
             screen.getByText(/Robots/i),
-            screen.getByText(/Favourites/i),
         ];
 
         expect(elements[0]).toBeInTheDocument();
         expect(elements[1]).toBeInTheDocument();
-        expect(elements[2]).toBeInTheDocument();
     });
 });

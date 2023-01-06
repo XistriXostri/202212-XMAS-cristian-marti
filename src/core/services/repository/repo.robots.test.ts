@@ -84,7 +84,7 @@ describe('Given a Task Repo', () => {
 
             const data = await repo.create(mockNewTaskPayload);
             expect(data).toHaveProperty('name', mockNewTaskPayload.name);
-            expect(data).toHaveProperty('imageUrl', mockNewTaskPayload.image);
+            expect(data).toHaveProperty('image', mockNewTaskPayload.image);
         });
         test(`Then if the data are NOT VALID, we received a rejected promise`, async () => {
             global.fetch = jest.fn().mockResolvedValue({
