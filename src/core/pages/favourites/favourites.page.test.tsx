@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
-import { arrayRobotMock } from '../../data/mock.robots';
-import { List } from './robot.list';
+import { arrayRobotMock } from '../../components/data/mock.robots';
+import FavouritesPage from './favourites.page';
 
 describe('Given "List" component', () => {
     describe('When it is initially instantiated', () => {
@@ -9,17 +9,17 @@ describe('Given "List" component', () => {
         const mockRobots = arrayRobotMock;
 
         render(
-            <List
+            <FavouritesPage
                 handleUpdate={handleUpdate}
                 handleDelete={handleDelete}
                 robots={mockRobots}
-            ></List>
+            ></FavouritesPage>
         );
 
         test(`Then component should be render the heading`, () => {
             const elementTitle = screen.getByRole('heading', {
-                name: 'Robots list',
-            }); // <h3>
+                name: 'Favourite robots',
+            }); // <h2>
 
             expect(elementTitle).toBeInTheDocument();
         });
