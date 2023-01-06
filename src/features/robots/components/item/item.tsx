@@ -15,10 +15,10 @@ export function Item({
                 handleDelete(item.id);
                 break;
             case 'modify':
-                item.isFavourite = !item.isFavourite;
-                handleUpdate(item);
                 break;
             case 'fav':
+                item.isFavourite = !item.isFavourite;
+                handleUpdate(item);
                 break;
         }
     };
