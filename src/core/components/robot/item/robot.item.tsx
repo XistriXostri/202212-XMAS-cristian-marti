@@ -41,7 +41,7 @@ export function Item({
             </div>
             <div className="robot__buttons">
                 <span role="button" onClick={() => handleClick('fav')}>
-                    ⭐
+                    {item.isFavourite ? '⭐' : '✩'}
                 </span>
                 <span role="button" onClick={() => handleClick('modify')}>
                     🛠

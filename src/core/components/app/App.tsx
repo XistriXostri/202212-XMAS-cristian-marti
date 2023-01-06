@@ -12,6 +12,7 @@ function App() {
     const items: MenuItems = [
         { path: '/home', label: 'Home' },
         { path: '/robots', label: 'Robots' },
+        { path: '/favourites', label: 'Favourites' },
     ];
 
     const { robots, handleDelete, handleAdd, handleUpdate, handleLoad } =
