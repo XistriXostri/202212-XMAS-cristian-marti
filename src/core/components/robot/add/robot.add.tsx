@@ -1,8 +1,9 @@
 import { SyntheticEvent, useState } from 'react';
-import { Robot } from '../../models/robot';
+import { Robot } from '../../../types/robot';
 
 export function Add({ handleAdd }: { handleAdd: (robot: Robot) => void }) {
     const initialFormData: Partial<Robot> = {
+        name: '',
         velocity: 0,
         strength: 0,
         creator: '',

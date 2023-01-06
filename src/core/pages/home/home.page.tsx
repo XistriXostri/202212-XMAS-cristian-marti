@@ -1,14 +1,7 @@
-import { useEffect } from 'react';
-import { useRobots } from '../../robots/hooks/use.robots';
-
 export default function HomePage() {
-    const { getRobots, handleLoad } = useRobots();
-
-    useEffect(() => {
-        handleLoad();
-    }, [handleLoad]);
-
-    const totalRobots = getRobots().length;
+    const totalRobots = JSON.parse(
+        sessionStorage.getItem('totalRobots') as string
+    );
 
     return (
         <>

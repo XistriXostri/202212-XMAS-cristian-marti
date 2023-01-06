@@ -1,4 +1,4 @@
-import { RobotStructure } from '../../models/robot';
+import { RobotStructure } from '../../../types/robot';
 
 export function Item({
     item,
