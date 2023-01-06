@@ -7,9 +7,12 @@ export default function HomePage() {
         <>
             <h2 className="page__title">Home</h2>
             <hr className="bar"></hr>
-            <p className="page__text">
-                Robots: {totalRobots ? totalRobots : 0}
-            </p>
+            <div className="home__content">
+                <p className="page__text">
+                    Robots: {totalRobots ? totalRobots : 0}
+                </p>
+                <img src="./assets/soldier.png" alt="robot"></img>
+            </div>
         </>
     );
 }
