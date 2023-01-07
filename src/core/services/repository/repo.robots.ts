@@ -5,7 +5,7 @@ const invalidIdError = new Error('Invalid ID');
 
 export class RobotsRepo implements Repository<RobotStructure> {
     constructor(
-        private url = 'https://my-json-server.typicode.com/XistriXostri/202212-XMAS-cristian-marti/robots'
+        private url = 'https://my-json-server.typicode.com/XistriXostri/API/robots'
     ) {}
 
     async load(): Promise<RobotStructure[]> {
