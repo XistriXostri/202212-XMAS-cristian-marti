@@ -38,7 +38,7 @@ export class RobotsRepo implements Repository<RobotStructure> {
 
     async update(payload: Partial<RobotStructure>): Promise<RobotStructure> {
         if (!payload.id) return Promise.reject(invalidIdError);
-        const resp = await fetch(this.url + '/' + payload.id, {
+        const resp = await fetch(this.url + '/' + payload.id + '/', {
             method: 'PATCH',
             body: JSON.stringify(payload),
             headers: {
@@ -51,7 +51,7 @@ export class RobotsRepo implements Repository<RobotStructure> {
     }
     async delete(id: RobotStructure['id']): Promise<RobotStructure['id']> {
         if (!id) return Promise.reject(invalidIdError);
-        const resp = await fetch(this.url + '/' + id, {
+        const resp = await fetch(this.url + '/' + id + '/', {
             method: 'DELETE',
         });
         if (!resp.ok)

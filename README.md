@@ -6,6 +6,8 @@ Netlify: https://xmas-challenge-cristian-marti.netlify.app/
 
 Sonar: https://sonarcloud.io/project/overview?id=XistriXostri_202212-XMAS-cristian-marti
 
+server: https://github.com/XistriXostri/API
+
 ## Robots
 
 Tendrás que crear un frontend en React que permita al usuario gestionar un listado con sus **robots**.
