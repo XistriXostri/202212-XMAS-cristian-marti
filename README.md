@@ -52,4 +52,4 @@ Volviendo al testing: haz que se recoja en sonar y trata de llegar al 100% de co
 -   Crea una página de favoritos para los robots que seleccione el usuario,
 
 -   Crea una página de detalle para los robots.
-    Puedes añadir al modelo la información que se te ocurra para mostrarla en esta página.
+    Puedes añadir al modelo la información que se te ocurra para mostrarla en esta página
