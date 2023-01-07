@@ -4,7 +4,7 @@
 
 Netlify: https://xmas-challenge-cristian-marti.netlify.app/
 
-Sonar: https://sonarcloud.io/project/overview?id=XistriXostri_2202212-W12-cristian-marti
+Sonar: https://sonarcloud.io/project/overview?id=XistriXostri_202212-XMAS-cristian-marti
 
 ## Robots
 
