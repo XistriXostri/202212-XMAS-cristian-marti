@@ -1,0 +1,24 @@
+{
+  "robots": [
+    {
+      "id": "000002",
+      "name": "pepe",
+      "velocity": "2",
+      "strength": "2",
+      "creationDate": "02/01/2023",
+      "creator": "Pepe",
+      "image": "https://robohash.org/pepe.png",
+      "isFavourite": false
+    },
+    {
+      "name": "dsgsdf",
+      "velocity": 0,
+      "strength": "7",
+      "creator": "sdfgsdfg",
+      "id": "879928",
+      "creationDate": "10/1/2023",
+      "image": "https://robohash.org/dsgsdf.png",
+      "isFavourite": true
+    }
+  ]
+}

@@ -1,5 +1,3 @@
-import React, { useEffect } from 'react';
-import { useRobots } from '../../hooks/use.robots';
 import { MenuItems } from '../../types/menu.item';
 import { Footer } from '../footer/footer';
 import { Header } from '../header/header';
@@ -15,25 +13,12 @@ export function App() {
         { path: '/favourites', label: 'Favourites' },
     ];
 
-    const { robots, handleDelete, handleAdd, handleUpdate, handleLoad } =
-        useRobots();
-
-    useEffect(() => {
-        handleLoad();
-    }, [handleLoad]);
-
     return (
         <>
             <Header>
                 <Menu items={items}></Menu>
             </Header>
-            <AppRoutes
-                items={items}
-                handleDelete={handleDelete}
-                handleUpdate={handleUpdate}
-                robots={robots}
-                handleAdd={handleAdd}
-            ></AppRoutes>
+            <AppRoutes items={items}></AppRoutes>
             <Footer></Footer>
         </>
     );

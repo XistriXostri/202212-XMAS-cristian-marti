@@ -1,15 +1,14 @@
+import { useEffect } from 'react';
 import { List } from '../../components/robot/list/robot.list';
-import { RobotStructure } from '../../types/robot';
+import { useRobots } from '../../hooks/use.robots';
 
-export default function FavouritesPage({
-    robots,
-    handleDelete,
-    handleUpdate,
-}: {
-    handleDelete: (id: string) => Promise<void>;
-    handleUpdate: (robot: Partial<RobotStructure>) => Promise<void>;
-    robots: Array<RobotStructure>;
-}) {
+export default function FavouritesPage() {
+    const { robots, handleDelete, handleLoad, handleUpdate } = useRobots();
+
+    useEffect(() => {
+        handleLoad();
+    }, [handleLoad]);
+
     return (
         <>
             <h2 className="page__title">Favourite robots</h2>
