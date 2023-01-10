@@ -4,9 +4,7 @@ import { RobotStructure } from '../../types/robot';
 const invalidIdError = new Error('Invalid ID');
 
 export class RobotsRepo implements Repository<RobotStructure> {
-    constructor(
-        private url = 'https://my-json-server.typicode.com/XistriXostri/API/robots'
-    ) {}
+    constructor(private url = 'http://localhost:3300/robots/') {}
 
     async load(): Promise<RobotStructure[]> {
         const resp = await fetch(this.url);
