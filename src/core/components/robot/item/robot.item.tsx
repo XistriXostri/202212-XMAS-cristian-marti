@@ -36,6 +36,63 @@ export function Item({
         }
     };
 
+    const modifyFeatures = () => {
+        return (
+            <>
+                <h2 className="robot__title">
+                    <input
+                        type="text"
+                        name="name"
+                        id="name"
+                        value={updateData.name}
+                        onInput={handleInput}
+                        required
+                    />
+                </h2>
+                <p>
+                    Velocity:
+                    <input
+                        type="range"
+                        name="velocity"
+                        id="velocity"
+                        min="0"
+                        max="10"
+                        value={updateData.velocity}
+                        onInput={handleInput}
+                        required
+                    />
+                    <output>{updateData.velocity}</output>
+                </p>
+                <p>
+                    Strength:
+                    <input
+                        type="range"
+                        name="strength"
+                        id="strength"
+                        min="0"
+                        max="10"
+                        value={updateData.strength}
+                        onInput={handleInput}
+                        required
+                    />
+                    <output>{updateData.strength}</output>
+                </p>
+            </>
+        );
+    };
+
+    const showFeatures = () => {
+        return (
+            <>
+                <h2 className="robot__title">{item.name}</h2>
+                <p>Velocity: {item.velocity}</p>
+                <p>Strength: {item.strength}</p>
+                <p>Creator: {item.creator}</p>
+                <p>Creation date: {item.creationDate}</p>
+            </>
+        );
+    };
+
     return (
         <>
             <div>
@@ -46,57 +103,8 @@ export function Item({
                 />
             </div>
             <div className="robot__features">
-                {!updating && (
-                    <>
-                        <h2 className="robot__title">{item.name}</h2>
-                        <p>Velocity: {item.velocity}</p>
-                        <p>Strength: {item.strength}</p>
-                        <p>Creator: {item.creator}</p>
-                        <p>Creation date: {item.creationDate}</p>
-                    </>
-                )}
-                {updating && (
-                    <>
-                        <h2 className="robot__title">
-                            <input
-                                type="text"
-                                name="name"
-                                id="name"
-                                value={updateData.name}
-                                onInput={handleInput}
-                                required
-                            />
-                        </h2>
-                        <p>
-                            Velocity:
-                            <input
-                                type="range"
-                                name="velocity"
-                                id="velocity"
-                                min="0"
-                                max="10"
-                                value={updateData.velocity}
-                                onInput={handleInput}
-                                required
-                            />
-                            <output>{updateData.velocity}</output>
-                        </p>
-                        <p>
-                            Strength:
-                            <input
-                                type="range"
-                                name="strength"
-                                id="strength"
-                                min="0"
-                                max="10"
-                                value={updateData.strength}
-                                onInput={handleInput}
-                                required
-                            />
-                            <output>{updateData.strength}</output>
-                        </p>
-                    </>
-                )}
+                {!updating && showFeatures()}
+                {updating && modifyFeatures()}
             </div>
             <div className="robot__buttons">
                 <span role="button" id="fav" onClick={handleClick}>
