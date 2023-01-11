@@ -13,7 +13,7 @@ export const robotMock: RobotStructure = {
     creationDate: '04/01/2023',
     creator: 'Cristian',
     image: 'https://robohash.org/wally.png',
-    isFavourite: false,
+    isFavourite: true,
 };
 
 export const arrayRobotMock: Array<RobotStructure> = [
@@ -25,7 +25,7 @@ export const arrayRobotMock: Array<RobotStructure> = [
         creationDate: '04/01/2023',
         creator: 'Cristian',
         image: 'https://robohash.org/wally.png',
-        isFavourite: false,
+        isFavourite: true,
     },
     {
         id: '000002',

@@ -9,13 +9,15 @@ export default function FavouritesPage() {
         handleLoad();
     }, [handleLoad]);
 
+    const favouriteRobots = robots.filter((robot) => robot.isFavourite);
+
     return (
         <>
             <h2 className="page__title">Favourite robots</h2>
             <List
                 handleDelete={handleDelete}
                 handleUpdate={handleUpdate}
-                robots={robots.filter((robot) => robot.isFavourite)}
+                robots={favouriteRobots}
             ></List>
         </>
     );
