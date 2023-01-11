@@ -30,6 +30,16 @@
       "creationDate": "10/1/2023",
       "image": "https://robohash.org/Nieto.png",
       "isFavourite": true
+    },
+    {
+      "name": "Robotaco",
+      "velocity": "7",
+      "strength": "4",
+      "creator": "unknown",
+      "id": "803161",
+      "creationDate": "11/1/2023",
+      "image": "https://robohash.org/Robotaco.png",
+      "isFavourite": true
     }
   ]
 }
