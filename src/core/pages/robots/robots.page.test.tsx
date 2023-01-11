@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import RobotsPage from './robots.page';
 
-describe('Given HomePage component', () => {
+describe('Given RobotsPage component', () => {
     describe('When it has been render', () => {
         render(<RobotsPage></RobotsPage>);
 
