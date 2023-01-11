@@ -7,8 +7,9 @@
       "strength": "4",
       "creationDate": "02/01/2023",
       "creator": "Pepe",
-      "image": "https://robohash.org/pepe.png",
-      "isFavourite": false
+      "image": "https://robohash.org/Pepe.png",
+      "isFavourite": false,
+      "https://robohash.org/pepe.png": "https://robohash.org/roberto.png"
     },
     {
       "name": "Wally",

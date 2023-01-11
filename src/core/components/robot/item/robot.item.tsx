@@ -26,7 +26,10 @@ export function Item({
                 handleDelete(item.id);
                 break;
             case 'modify':
-                if (updating) handleUpdate(updateData);
+                if (updating) {
+                    updateData.image = `https://robohash.org/${updateData.name}.png`;
+                    handleUpdate(updateData);
+                }
                 setUpdating(!updating);
                 break;
             case 'fav':
