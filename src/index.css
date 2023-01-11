@@ -162,7 +162,8 @@ footer {
     flex-direction: column;
 }
 
-.add__textInput input {
+.add__textInput input,
+.robot__features h2 input {
     box-sizing: border-box;
     font-size: 0.9em;
     line-height: 32px;
@@ -184,7 +185,8 @@ footer {
     flex-direction: column;
 }
 
-.add__rangeInput input {
+.add__rangeInput input,
+.robot__features p input {
     width: 200px;
     height: 20px;
     margin: 25px 20px 20px 20px;
