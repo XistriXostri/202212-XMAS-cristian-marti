@@ -2,22 +2,33 @@
   "robots": [
     {
       "id": "000002",
-      "name": "pepe",
-      "velocity": "2",
-      "strength": "2",
+      "name": "Pepe",
+      "velocity": "3",
+      "strength": "4",
       "creationDate": "02/01/2023",
       "creator": "Pepe",
-      "image": "https://robohash.org/pepe.png",
+      "image": "https://robohash.org/Pepe.png",
+      "isFavourite": false,
+      "https://robohash.org/pepe.png": "https://robohash.org/roberto.png"
+    },
+    {
+      "name": "Wally",
+      "velocity": "7",
+      "strength": "4",
+      "creator": "Disney",
+      "id": "096400",
+      "creationDate": "10/1/2023",
+      "image": "https://robohash.org/Wally.png",
       "isFavourite": false
     },
     {
-      "name": "dsgsdf",
-      "velocity": 0,
-      "strength": "7",
-      "creator": "sdfgsdfg",
-      "id": "879928",
+      "name": "Nieto",
+      "velocity": "3",
+      "strength": "10",
+      "creator": "David",
+      "id": "823227",
       "creationDate": "10/1/2023",
-      "image": "https://robohash.org/dsgsdf.png",
+      "image": "https://robohash.org/Nieto.png",
       "isFavourite": true
     }
   ]
