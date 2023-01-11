@@ -16,14 +16,7 @@ describe('Given "List" component', () => {
             ></List>
         );
 
-        test(`Then component should be render the heading`, () => {
-            const elementTitle = screen.getByRole('heading', {
-                name: 'Robots list',
-            }); // <h3>
-            expect(elementTitle).toBeInTheDocument();
-        });
-
-        test(`Then the list have been called from fauvorites should be render the heading`, () => {
+        test(`Then the list have been called from favourites should be render the heading`, () => {
             const elementTitle = screen.getByRole('heading', {
                 name: 'Robots list',
             }); // <h3>
