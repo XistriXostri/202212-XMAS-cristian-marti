@@ -87,7 +87,9 @@ export function Add({ handleAdd }: { handleAdd: (robot: Robot) => void }) {
                     </div>
                 </div>
                 <div>
-                    <button type="submit">Create</button>
+                    <button type="submit">
+                        <p>Create</p>
+                    </button>
                 </div>
             </form>
         </section>

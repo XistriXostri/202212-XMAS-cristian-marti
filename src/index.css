@@ -100,12 +100,12 @@ header .bar__title {
 }
 
 .menu a:hover,
-.add__robot button:hover {
+.add__robot__button:hover {
     background-image: url(http://ronenness.github.io/RPGUI/rpgui/img/button-hover.png);
 }
 
 .menu a:active,
-.add__robot button:active {
+.add__robot__button:active {
     background-image: url(http://ronenness.github.io/RPGUI/rpgui/img/button-down.png);
 }
 
@@ -201,13 +201,16 @@ footer {
     display: flex;
     align-content: center;
     justify-content: center;
-    width: 100%;
+
+    width: 9rem;
     height: 100%;
-    padding: 60%;
-    line-height: 1%;
-    font-size: 80%;
+
     margin-top: 20%;
     margin-bottom: 20%;
+}
+
+.add__robot button p {
+    font-size: 80%;
 }
 
 .robot {
@@ -284,6 +287,10 @@ footer {
         justify-content: space-evenly;
         height: auto;
     }
+    .add__robot button {
+        width: 15rem;
+    }
+
     .robot__features {
         display: flex;
         flex-direction: column;
@@ -298,6 +305,9 @@ footer {
         flex-direction: column;
         align-items: center;
     }
+    .add__robot button {
+        width: 10rem;
+    }
 }
 
 @media (max-width: 500px) {
@@ -307,6 +317,9 @@ footer {
 
     .page__title {
         font-size: 100%;
+    }
+    .add__robot button {
+        width: 8rem;
     }
 
     .add__title,
