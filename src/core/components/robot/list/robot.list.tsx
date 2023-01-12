@@ -18,13 +18,16 @@ export function List({
                 <ul className="list__robots">
                     {robots.map((item) => {
                         return (
-                            <li className="robot" key={item.id}>
-                                <Item
-                                    item={item}
-                                    handleUpdate={handleUpdate}
-                                    handleDelete={handleDelete}
-                                ></Item>
-                            </li>
+                            <>
+                                <li className="robot" key={item.id}>
+                                    <Item
+                                        item={item}
+                                        handleUpdate={handleUpdate}
+                                        handleDelete={handleDelete}
+                                    ></Item>
+                                </li>
+                                <hr className="bar robot__bar"></hr>
+                            </>
                         );
                     })}
                 </ul>
